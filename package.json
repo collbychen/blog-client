@@ -1,0 +1,38 @@
+{
+  "name": "coblog_client",
+  "version": "1.0.0",
+  "description": "一个用nuxt框架开发的个人博客",
+  "author": "小宋",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "npm run lint:js"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.12.2",
+    "core-js": "^3.6.5",
+    "dayjs": "^1.8.19",
+    "element-ui": "^2.13.2",
+    "highlight.js": "^10.3.2",
+    "js-cookie": "^2.2.1",
+    "marked": "^0.8.0",
+    "nuxt": "^2.14.6",
+    "nuxt-vuex-localstorage": "^1.2.7",
+    "stylus": "^0.54.7",
+    "vue-lazyload": "^1.3.3",
+    "vuex-persistedstate": "^4.0.0-beta.1"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.10.0",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "stylus-loader": "^4.2.0",
+    "svg-sprite-loader": "^5.0.0"
+  }
+}
