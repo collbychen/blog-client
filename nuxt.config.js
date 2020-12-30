@@ -52,7 +52,7 @@ export default {
   ],
 
   server: {
-    port: 8000 // default: 80
+    port: 3000
   },
   axios: {
     proxy: true,
