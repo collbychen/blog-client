@@ -7,7 +7,6 @@ const resolve = (dir) => {
 export default {
   mode: 'universal',
   srcDir: 'src/',
-  // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'coblog_client',
     meta: [
@@ -53,11 +52,10 @@ export default {
   */
   buildModules: [
     // '@nuxtjs/eslint-module'
+    '@nuxtjs/style-resources'
   ],
-  // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/style-resources'
   ],
   server: {
     port: 3000
