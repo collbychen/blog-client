@@ -1,4 +1,4 @@
-FROM node:10.15.3-alpine
+FROM node:15.5.0-alpine3.10
 MAINTAINER collby
 RUN mkdir -p /app
 COPY . /app
