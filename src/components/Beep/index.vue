@@ -87,7 +87,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  @import "~@/assets/css/theme"
+  @import "~assets/css/theme"
   .user-info
     margin-top 20px
     display flex

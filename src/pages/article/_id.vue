@@ -136,7 +136,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-    @import "~@/assets/css/theme"
+    @import "~assets/css/theme"
     .article-wrapper
         width 100%
         padding 0 20px

@@ -46,8 +46,8 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-    @import "~@/assets/css/theme"
-    @import "~@/assets/css/theme"
+    @import "~assets/css/theme"
+    @import "~assets/css/theme"
     .site-search
         width 15%
         height 100%

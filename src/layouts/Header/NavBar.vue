@@ -60,8 +60,8 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-    @import "~@/assets/css/theme"
-    @import '~@/assets/css/animation'
+    @import "~assets/css/theme"
+    @import '~assets/css/animation'
     .site-nav
         margin auto 0
         width 50%

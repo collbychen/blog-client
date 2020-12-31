@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-  @import "~@/assets/css/theme"
+  @import "~assets/css/theme"
   .el-dropdown-link
     display flex
     justify-content center

@@ -73,7 +73,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-  @import "~@/assets/css/theme"
+  @import "~assets/css/theme"
   .content-wrap
     float right
     width 100%

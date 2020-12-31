@@ -33,7 +33,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-@import "~@/assets/css/theme"
+@import "~assets/css/theme"
 .login
   position: fixed
   left: 0

@@ -27,8 +27,8 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-@import "~@/assets/css/theme"
-@import "~@/assets/css/base"
+@import "~assets/css/theme"
+@import "~assets/css/base"
 .sidebar
   float: right
   position relative

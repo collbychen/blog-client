@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-@import "~@/assets/css/theme"
+@import "~assets/css/theme"
 .error_warp
   position: fixed
   left: 0

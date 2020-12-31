@@ -50,7 +50,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-  @import "~@/assets/css/theme"
+  @import "~assets/css/theme"
   .list-group
     margin 0
     padding-left 10px

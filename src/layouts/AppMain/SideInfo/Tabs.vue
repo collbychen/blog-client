@@ -34,8 +34,8 @@ export default {
 </script>
 
 <style lang="stylus" >
-  @import "~@/assets/css/theme"
-  @import "~@/assets/css/base"
+  @import "~assets/css/theme"
+  @import "~assets/css/base"
   .hot-article
     position relative
     border-radius 5px

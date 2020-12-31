@@ -30,7 +30,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style scoped lang="stylus">
   .icon {
     /*width 1em*/
     /*height 1em*/

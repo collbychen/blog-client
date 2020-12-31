@@ -52,7 +52,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-@import "~@/assets/css/theme"
+@import "~assets/css/theme"
 .header-wrapper
     background $background-color
     position fixed

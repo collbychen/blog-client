@@ -104,8 +104,8 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-    @import "~@/assets/css/theme"
-    @import "~@/assets/css/base"
+    @import "~assets/css/theme"
+    @import "~assets/css/base"
     .app-wrapper
         /*background aqua*/
         font-size $font-size-small
