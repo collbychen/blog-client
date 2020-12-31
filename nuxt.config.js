@@ -1,5 +1,8 @@
-// eslint-disable-next-line nuxt/no-cjs-in-config
 const path = require('path')
+/* eslint-disable */
+const resolve = (dir) => {
+  return path.join(__dirname, dir)
+}
 
 export default {
   mode: 'universal',
@@ -16,41 +19,45 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: 'https://cdn.coblog.cn/favicon.ico' }
     ]
   },
+  router: {
+    scrollBehavior: (to, from, savedPosition) => {
+      return { x: 0, y: 0 }
+    },
+    linkActiveClass: 'active-nav'
+  },
   /*
   ** Customize the progress-bar color
   */
   loading: { color: '#409EFF' },
-  // Global CSS (https://go.nuxtjs.dev/config-css)
+  /*
+  ** Global CSS
+  */
   css: [
     'element-ui/lib/theme-chalk/index.css',
-    '@/assets/css/main.css'
+    '@/assets/css/index.styl'
   ],
-
-  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
+  /*
+  ** Plugins to load before mounting the App
+  */
   plugins: [
     '@/plugins/element-ui',
     '@/plugins/axios',
     { src: '@/plugins/svg-icon', ssr: true },
     { src: '@/plugins/vue-lazyload', ssr: false },
-    { src: '@/plugins/error-catch', ssr: false },
     { src: '@/plugins/localStorage', ssr: false }
   ],
-
-  // Auto import components (https://go.nuxtjs.dev/config-components)
+  // Auto import components
   components: true,
-
-  // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
+  /*
+  ** Nuxt.js dev-modules
+  */
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
     // '@nuxtjs/eslint-module'
   ],
-
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios'
   ],
-
   server: {
     port: 3000
   },
