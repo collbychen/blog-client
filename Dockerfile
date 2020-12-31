@@ -1,22 +1,16 @@
-FROM node:10.9.0-alpine
-
+FROM node:10.15.3-alpine
+MAINTAINER collby
 RUN mkdir -p /app
 COPY . /app
 WORKDIR /app
 
-#RUN apk update && apk upgrade && apk add git
-
-COPY package.json /app
-#RUN npm rebuild
-RUN npm install
+#此为cnpm淘宝镜像
+#RUN npm config set registry https://registry.npm.taobao.org
 
 ENV NODE_ENV=production
-
-COPY . /app
-RUN npm run build
-RUN node upload
-
 ENV HOST 0.0.0.0
 EXPOSE 3000
 
+RUN npm install
+RUN npm run build
 CMD ["npm", "start"]
