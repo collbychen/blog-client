@@ -77,8 +77,10 @@ export default {
     justify-content center
     align-content center
     .logo
-        padding-left 10px
+        padding 0 10px 10px 10px
         cursor pointer
+        display flex
+        align-items center
         h2
             font-size $font-size-title
             color rgba(0,0,0,.5)

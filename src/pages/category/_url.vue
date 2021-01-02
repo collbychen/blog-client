@@ -129,7 +129,7 @@ export default {
         .title-list
             display flex
             flex-wrap wrap
-            justify-content start
+            //justify-content start
             flex-direction: row
             .tag-margin
                 box-sizing border-box

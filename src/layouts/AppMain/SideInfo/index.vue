@@ -71,7 +71,7 @@ export default {
         &:hover
           transform rotateZ(360deg)
       .text-desc
-        padding 0 15px 0 15px
+        padding 15px
         font-size $font-size-small
         line-height 1.5em
         color $minor-color

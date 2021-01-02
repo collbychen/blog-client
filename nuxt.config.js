@@ -18,12 +18,6 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: 'https://cdn.coblog.cn/favicon.ico' }
     ]
   },
-  router: {
-    scrollBehavior: (to, from, savedPosition) => {
-      return { x: 0, y: 0 }
-    },
-    linkActiveClass: 'active-nav'
-  },
   /*
   ** Customize the progress-bar color
   */
@@ -79,6 +73,7 @@ export default {
     // transpile: [/^element-ui/],
     // vendor: ['axios']
     extend (config, context) {
+      config.performance.hints = false
       // 排除 nuxt 原配置的影响,Nuxt 默认有vue-loader,会处理svg,img等
       // 找到匹配.svg的规则,然后将存放svg文件的目录排除
       const svgRule = config.module.rules.find(rule => rule.test.test('.svg'))
@@ -92,6 +87,10 @@ export default {
           loader: 'svg-sprite-loader',
           options: { symbolId: 'icon-[name]' }
         }]
+      })
+      config.module.rules.push({
+        test:/\.styl$/,
+        loader: "stylus-loader",
       })
     }
   }
