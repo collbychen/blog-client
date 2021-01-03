@@ -88,10 +88,6 @@ export default {
           options: { symbolId: 'icon-[name]' }
         }]
       })
-      config.module.rules.push({
-        test:/\.styl$/,
-        loader: "stylus-loader",
-      })
     }
   }
 }
