@@ -46,7 +46,6 @@ export default {
   */
   buildModules: [
     // '@nuxtjs/eslint-module'
-    '@nuxtjs/style-resources'
   ],
   modules: [
     '@nuxtjs/axios',
