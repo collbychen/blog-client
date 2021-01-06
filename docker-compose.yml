@@ -1,13 +1,17 @@
 version: '3'
 services:
   client:
+    image: client:1.00
     container_name: client
     restart: always
     build:
       context: ./
       dockerfile: ./Dockerfile
-    expose:
+
+    ports:
       - "3000:3000"
+#    expose:
+#      - "3000"
     networks:
       - "blog"
 networks:

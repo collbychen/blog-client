@@ -9,7 +9,8 @@ EXPOSE 3000
 RUN mkdir -p /app
 COPY . /app
 WORKDIR /app
+RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 
-RUN npm install
+RUN cnpm install
 RUN npm run build
 CMD ["npm", "start"]
