@@ -1,24 +1,24 @@
 <template>
   <div class="app-wrapper">
-    <div class="videoWarp">
-      <input id="slide_1" type="radio" name="select" checked>
-      <input id="slide_2" type="radio" name="select">
-      <input id="slide_3" type="radio" name="select">
-      <div class="slider">
-        <label for="slide_1" class="slide slide_1" />
-        <label for="slide_2" class="slide slide_2" />
-        <label for="slide_3" class="slide slide_3" />
-      </div>
-      <div class="inner_part">
-        <video class="video s1" src="https://cdn.coblog.cn/yingchuyin.mp4" autoplay muted loop />
-      </div>
-      <div class="inner_part">
-        <video class="video s2" src="https://cdn.coblog.cn/xiannvzuo.mp4" autoplay muted loop />
-      </div>
-      <div class="inner_part">
-        <video class="video s3" src="https://cdn.coblog.cn/jiatenghui.mp4" autoplay muted loop />
-      </div>
-    </div>
+<!--    <div class="videoWarp">-->
+<!--      <input id="slide_1" type="radio" name="select" checked>-->
+<!--      <input id="slide_2" type="radio" name="select">-->
+<!--      <input id="slide_3" type="radio" name="select">-->
+<!--      <div class="slider">-->
+<!--        <label for="slide_1" class="slide slide_1" />-->
+<!--        <label for="slide_2" class="slide slide_2" />-->
+<!--        <label for="slide_3" class="slide slide_3" />-->
+<!--      </div>-->
+<!--      <div class="inner_part">-->
+<!--        <video class="video s1" src="https://cdn.coblog.cn/yingchuyin.mp4" autoplay muted loop />-->
+<!--      </div>-->
+<!--      <div class="inner_part">-->
+<!--        <video class="video s2" src="https://cdn.coblog.cn/xiannvzuo.mp4" autoplay muted loop />-->
+<!--      </div>-->
+<!--      <div class="inner_part">-->
+<!--        <video class="video s3" src="https://cdn.coblog.cn/jiatenghui.mp4" autoplay muted loop />-->
+<!--      </div>-->
+<!--    </div>-->
     <div class="line">
       <div class="text">
         最新文章
@@ -50,7 +50,7 @@
         </div>
       </article>
       <div v-if="hasArticle" class="more hover-active" @click="loadMoreArticle()">
-        <h3>加载更多文章</h3>
+        <h4>加载更多文章</h4>
       </div>
       <div v-else class="none">
         没有更多文章了
@@ -203,6 +203,7 @@ export default {
             font-size $font-size-small
             padding 0 10px
             display flex
+            align-items center
             flex-direction column
             @media (max-width 500px)
                 .article-con
@@ -289,12 +290,15 @@ export default {
                 display flex
                 justify-content center
                 align-items center
-                width 100%
+                width 40%
                 box-shadow $box-shadow
-                background $background-color
+                background $color
                 border-radius 5px
-                h3
-                    margin 5px
+                h4
+                    color $background-color
+                    margin 8px
+                &:hover
+	                background $minor-color
             .none
                 text-align center
                 margin 30px 0

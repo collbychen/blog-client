@@ -4,11 +4,13 @@ const resolve = (dir) => {
   return path.join(__dirname, dir)
 }
 
+const proxyUrl = process.env.NODE_ENV === 'production' ? 'http://server:9090' : 'http://localhost:9090'
+
 export default {
   mode: 'universal',
   srcDir: 'src/',
   head: {
-    title: 'coblog_client',
+    title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -60,8 +62,7 @@ export default {
   },
   proxy: {
     '/api': {
-      // target: 'https://wwww.coblog.cn:8080',
-      target: 'http://localhost:8080',
+      target: proxyUrl,
       changeOrigin: true,
       pathRewrite: {
         '^/api': ''
