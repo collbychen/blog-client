@@ -298,7 +298,7 @@ export default {
                     color $background-color
                     margin 8px
                 &:hover
-	                background $minor-color
+                    background $minor-color
             .none
                 text-align center
                 margin 30px 0

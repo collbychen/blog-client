@@ -9,14 +9,14 @@ export default function ({ $axios, redirect }) {
   // console.log($axios.defaults)
 
   // 成功的回调
-  $axios.onRequest((config) => {
-    // 请求之前判断有无token
-    // const token = getToken()
-    // if (token) {
-    //   $axios.setToken(token, 'Bearer')
-    // }
-    // console.log('请求中')
-  })
+  // $axios.onRequest((config) => {
+  //   // 请求之前判断有无token
+  //   const token = getToken()
+  //   if (token) {
+  //     $axios.setToken(token, 'Bearer')
+  //   }
+  //   console.log('请求中')
+  // })
   // response 拦截器
   $axios.interceptors.response.use(
     (response) => {

@@ -28,9 +28,9 @@ export default {
     name () {
       return this.$store.getters.name
     },
-    userID () {
-      return this.$store.getters.userID
-    }
+    avatar () {
+      return this.$store.getters.avatar
+    },
   },
   methods: {
     login (type) {

@@ -38,6 +38,5 @@ console.log('%c CoBlog Version 1.0', 'font-size:20pt;color:#FFA7A6')
 	flex-direction column
 	justify-content center
 	.content
-		background #FeFeFe
 		min-height calc(100vh - 225px)
 </style>

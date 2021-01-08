@@ -39,7 +39,8 @@ export default {
     '@/plugins/axios',
     { src: '@/plugins/svg-icon', ssr: true },
     { src: '@/plugins/vue-lazyload', ssr: false },
-    { src: '@/plugins/localStorage', ssr: false }
+    { src: '@/plugins/localStorage', ssr: false },
+    { src: '@/plugins/ribbon', ssr: false }
   ],
   // Auto import components
   components: true,
@@ -47,7 +48,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    // '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module'
   ],
   modules: [
     '@nuxtjs/axios',

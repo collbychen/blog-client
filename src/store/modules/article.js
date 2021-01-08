@@ -38,7 +38,7 @@ const actions = {
   // },
 
   // 获取归档列表
-  async getArchiveList ({ commit }, query) {
+  async getArchiveList ({ commit }) {
     const { data } = await this.$axios.$get('articles/archiveList')
     commit('setArchive', { data: data.list, count: data.count })
   },

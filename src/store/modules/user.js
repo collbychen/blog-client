@@ -51,7 +51,7 @@ const actions = {
     })
   },
   logout ({ commit, dispatch }) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       // 置空用户相关的信息
       commit('SET_TOKEN', '')
       dispatch('removeInfo')

@@ -11,8 +11,7 @@ services:
       - "3000:3000"
 #    expose:
 #      - "3000"
-    networks:
-      - "blog"
+
 networks:
   default:
     external:
