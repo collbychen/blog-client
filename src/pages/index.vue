@@ -263,9 +263,6 @@ export default {
                         text-omit(2)
                         margin 10px 0
                         padding-bottom 0
-                        overflow hidden
-                        text-overflow ellipsis
-                        white-space: nowrap
                     .line
                         height 1px
                         width 100%

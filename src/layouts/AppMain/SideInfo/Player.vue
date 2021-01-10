@@ -71,6 +71,12 @@ export default {
 					img: 'https://cdn.coblog.cn/Angela_.jpg',
 					url: 'https://cdn.coblog.cn/light_a_fire.mp3'
 				},
+                {
+                    name: '世界が終るまでは',
+                    author: 'WANDS',
+                    img: 'https://cdn.coblog.cn/%E7%81%8C%E7%AF%AE%E9%AB%98%E6%89%8B.jpg',
+                    url: 'https://cdn.coblog.cn/WANDS-%E4%B8%96%E7%95%8C%E3%81%8C%E7%B5%82%E3%82%8B%E3%81%BE%E3%81%A7%E3%81%AF.mp3'
+                },
 				{
 					name: 'Ref:rain',
 					author: 'Aimer',
@@ -101,6 +107,7 @@ export default {
 					img: 'https://cdn.coblog.cn/Carole&Tuesday.jpg',
 					url: 'https://cdn.coblog.cn/kiss_me.mp3'
 				}
+
 			]
 		}
 	},
