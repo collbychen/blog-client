@@ -11,6 +11,7 @@
       placeholder="搜索本站"
       @select="handleSelect"
     />
+
   </div>
 </template>
 
@@ -25,14 +26,14 @@ export default {
   methods: {
     async querySearchAsync (queryString, callback) {
       if (queryString) {
-        const { data, code, message } = await this.$axios.$get(`article/search?title=${queryString}`)
-        if (code === 0) {
+        const { data, code } = await this.$axios.$get(`articles/search?wd=${queryString}`)
+        if (code === 1) {
           data.map((item) => {
             item.value = item.title
           })
           callback(data)
         } else {
-          this.$message(message)
+          this.$message("没有搜索到相关内容")
         }
       }
     },

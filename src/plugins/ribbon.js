@@ -110,7 +110,7 @@
       colorSaturation: "80%",//纯度
       colorBrightness: "60%",//亮度
       colorAlpha: 0.65,//透明度
-      colorCycleSpeed: 6,//丝带不同块之间的色彩变化量
+      colorCycleSpeed: 5,//丝带不同块之间的色彩变化量
       verticalPosition: "center",//丝带相对于屏幕的初始位置：top/min 屏幕最上方，middle|center 中间，bottom|max 屏幕最下面
       horizontalSpeed: 200,//丝带水平方向移动速度参数（会乘以一个随机值）
       ribbonCount: 3,//同一时间丝带总条数
@@ -348,6 +348,6 @@
 //初始化并绘制
 // eslint-disable-next-line no-undef
 new Ribbons({
-  ribbonCount: 3,
+  ribbonCount: 2,
   parallaxAmount: -0.99
 });

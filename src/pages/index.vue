@@ -25,10 +25,11 @@
       </div>
     </div>
     <div class="article-wrapper">
+
       <article v-for="item in list" :key="item.id" class="article-con">
         <nuxt-link v-if="item.imageUrl" class="article-t" :to="{ name: 'article-id', params: { id: item.id } }" tag="div">
           <div class="item-pic">
-            <img v-lazy="item.imageUrl" alt="悠然小宋">
+            <img v-lazy="item.imageUrl" :key="item.imageUrl" alt="" />
           </div>
         </nuxt-link>
         <div class="article-b">
@@ -67,14 +68,15 @@ export default {
   data () {
     return {
       page: 1,
-      list: [],
       hasArticle: true
     }
   },
-  mounted () {
-    this.getList(this.page)
+  async asyncData ({ $axios }){
+    const { data } = await $axios.$get(`articles/list?page=1`)
+    return {
+      list: data.list
+    }
   },
-
   methods: {
     formatToDate (v) {
       return formDate(v)
@@ -84,8 +86,10 @@ export default {
       this.getList(this.page)
     },
     async getList (page) {
+      this.loading = true
       const { data } = await this.$axios.$get(`articles/list?page=${page}`)
       if (data.list.length) {
+        this.loading = false
         this.list = this.list.concat(data.list)
       } else {
         this.hasArticle = false
@@ -182,22 +186,22 @@ export default {
             height 5px
             margin 30px 0
             background #f2f2f2
-            box-sizing: border-box
+            box-sizing border-box
             .text
                 position absolute
                 left 50%
                 top 50%
-                margin: 0
-                text-align: center
-                padding-left: 20px
-                padding-right: 20px
-                font-size: 20px
-                text-transform: uppercase
-                background $background-color
-                transform: translate(-50%, -50%);
-                -webkit-transform: translate(-50%, -50%);
-                -moz-transform: translate(-50%, -50%);
-                -o-transform: translate(-50%, -50%);
+                margin 0
+                text-align center
+                padding-left 20px
+                padding-right 20px
+                font-size 20px
+                text-transform uppercase
+                background-color rgba(255,255,255,0.5)
+                transform translate(-50%, -50%)
+                -webkit-transform translate(-50%, -50%)
+                -moz-transform translate(-50%, -50%)
+                -o-transform translate(-50%, -50%)
                 color: $font-color
         .article-wrapper
             font-size $font-size-small
